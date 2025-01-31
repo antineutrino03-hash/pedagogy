@@ -16,6 +16,7 @@ Ensure you have the following dependencies installed:
 
 ```bash
 pip install pandas numpy matplotlib scipy lmfit
+```
 
 ## Usage
 
