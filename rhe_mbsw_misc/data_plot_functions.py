@@ -12,8 +12,7 @@ import matplotlib.cm as cms
 import matplotlib as mpl
 from matplotlib.ticker import MaxNLocator, LogLocator, MultipleLocator
 from matplotlib.ticker import FuncFormatter
-import data_tts_criteria as tt
-import config_credibility as cf
+
 from scipy.interpolate import interp1d
 sys.path.append("/Users/asm18/Documents/python_repo/pyReSpect-freq/")
 import contSpec as cs
