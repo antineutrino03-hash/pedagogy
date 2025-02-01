@@ -12,10 +12,10 @@ This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data pro
 
 ## Background
 
-The exercise stems from the fact that the mBSW fit plot generated in the textbook for the above dataset was inaccurate in the glassy regime. The glassy modulus determined by the mBSW spectrum model is determined not by the model parameters, but the $\tau_{min}$ using in the numerical integration calculation for the dynamic moduli. One can demonstrate the effects by choosing different values for that variable in this code, for which the loop is provided. 
+The exercise stems from the fact that the mBSW fit plot generated in the textbook for the above dataset was inaccurate in the glassy regime. The glassy modulus determined by the mBSW spectrum model is determined not by the model parameters but by the $\tau_{min}$ used in the numerical integration calculation for the dynamic moduli. One can demonstrate the effects by choosing different values for that variable in this code, for which the loop is provided. 
 
 
-For practical purposes, the $\tau_{min}$ chosen to be $5 \times 10^{-5}$ based on visual judgment of the glassy modulus. The equation of the mBSW model chosen is:
+For practical purposes, the $\tau_{min}$ is chosen to be $5 \times 10^{-5}$ based on the visual judgment of the glassy modulus. The equation of the mBSW model chosen is:
 
 $$H(\tau) = e^{-\left(\frac{\tau}{\tau_{\max}}\right)^\beta} \left[ H_e \left( \frac{\tau}{\tau_{\max}} \right)^{n_e} + H_g \left( \frac{\tau}{\tau_e} \right)^{-n_g} \right]
 \]$$
