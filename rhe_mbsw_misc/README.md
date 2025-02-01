@@ -1,4 +1,4 @@
-# Miscellaneous Data Scraping and Analysis
+# Miscellaneous Data Scraping and Analysis (Created: Jan 31, 2025)
 
 This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data processing, interpolation, and curve fitting. The notebook reads CSV files, processes numerical data, applies interpolation techniques, and performs curve fitting using `lmfit`.
 
