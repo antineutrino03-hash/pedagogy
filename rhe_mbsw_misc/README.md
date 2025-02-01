@@ -14,7 +14,9 @@ The exercise stems from the fact that the mBSW fit plot generated in the textboo
 
 
 For practical purposes, the $\tau_{min}$ chosen to be $5 \times 10^{-5}$ based on visual judgement of the glassy modulus. The equation of the mBSW model as defined in the paper is,
-![image](https://github.com/user-attachments/assets/29cf52ef-2d9e-456b-a297-0ce7f925fc6b)
+$$
+H(\lambda) = \left[ H_g \left( \frac{\lambda}{\lambda_c} \right)^{-n_g} + n_e G_N^0 \left( \frac{\lambda}{\lambda_{\max}} \right)^{n_e} \right] \exp \left[ -\left(\frac{\lambda}{\lambda_{\max}}\right)^{\beta_1} \right]
+$$
 
 
 However, we noticed that the broader fit to the dynamic moduli data can be improved, and hence, a model fitting was performed using the lmfit package, which showed different values of the mBSW parameters than the ones published in the paper. This occurs as the authors have obtained these parameters by fitting the spectrum to the Prony series obtained from moduli instead of fitting directly to the data. Note that the fitting here is performed using the $w=S$ weighting in the residual definition, as there was no available estimation of uncertainties.
