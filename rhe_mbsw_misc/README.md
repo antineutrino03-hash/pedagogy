@@ -5,7 +5,7 @@ This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data pro
 ## Files
 
 - .csv files are the scraped data from 
-> Hatzikiriakos, Savvas & Kapnistos, Michael & Chevillard, Cyril & Winter, H. & Roovers, Jacques. (2000). Relaxation time spectra of star polymers. Rheologica Acta. 39. 38-43. 10.1007/s003970050005.
+  > Hatzikiriakos, Savvas & Kapnistos, Michael & Chevillard, Cyril & Winter, H. & Roovers, Jacques. (2000). Relaxation time spectra of star polymers. Rheologica Acta. 39. 38-43. 10.1007/s003970050005.
 
 - data_plot_functions.py – custom library for plot aesthetics
 - wpd_project.tar - automeris.io file generated from the scraping
