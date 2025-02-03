@@ -5,12 +5,13 @@ This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data pro
 
 ## Summary
 
-** An mBSW model is fitted to PB-Linear SAOS data (Fig. 1) from Hatzikiriakos et al. (2000)
-** Specifically matched the glassy modulus for pedagogical reasons. Achieved by varying the minimum relaxation time cutoff ($\tau_{\text{min}} = 1.8\times 10^{-5}$ s) 
-** Generated the following figure and corresponding `.csv` files in the `output_data/` folder
-** Additional analysis performed for improved model fitting and uncertainty quantification
+- An mBSW model is fitted to PB-Linear SAOS data (Fig. 1) from Hatzikiriakos et al. (2000)
+- Specifically matched the glassy modulus for pedagogical reasons. Achieved by varying the minimum relaxation time cutoff ($\tau_{\text{min}} = 1.8\times 10^{-5}$ s) 
+- Generated the following figure and corresponding `.csv` files in the `output_data/` folder
+- Additional analysis performed for improved model fitting and uncertainty quantification
 
-![image](https://github.com/user-attachments/assets/afee939e-fe56-46ad-9864-a2c82bd7dd14)
+![image](https://github.com/user-attachments/assets/5e099b81-99ac-40b6-81eb-7a43a66bb8fb)
+
 
 ## Files
 
