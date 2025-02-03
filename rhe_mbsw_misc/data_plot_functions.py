@@ -191,7 +191,7 @@ def set_plot_params(temp_arr=np.ones((50,)), model_fit=0, param_plot=0, combined
         return fig, axes, symbol_array, color_array, norm
     
     if 1 <= num_plots <= 3:
-        fig, axes = plt.subplots(1, num_plots, figsize=(5*num_plots-1, 4))
+        fig, axes = plt.subplots(1, num_plots, figsize=(5.5*num_plots-1, 4))
         if num_plots == 1:
             for label in axes.get_xticklabels() + axes.get_yticklabels():
                     label.set_fontfamily('sans-serif')
