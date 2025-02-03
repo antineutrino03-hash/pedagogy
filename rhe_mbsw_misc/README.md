@@ -6,7 +6,9 @@ This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data pro
 ## Summary
 
 - An mBSW model is fitted to PB-Linear SAOS data (Fig. 1) from Hatzikiriakos et al. (2000)
-- Specifically matched the glassy modulus for pedagogical reasons. Achieved by varying the minimum relaxation time cutoff ($\tau_{\text{min}} = 1.8\times 10^{-5}$ s) 
+- Specifically matched the glassy modulus for pedagogical purposes 
+  - Achieved by varying the minimum relaxation time cutoff ($\tau_{\text{min}} = 1.8\times 10^{-5}~\text{s}$) 
+  - Calculated rubbery modulus, $G_{\text{rubbery}} = 1.42~\text{MPa}$
 - Generated the following figure and corresponding `.csv` files in the `output_data/` folder
 - Additional analysis performed for improved model fitting and uncertainty quantification
 
