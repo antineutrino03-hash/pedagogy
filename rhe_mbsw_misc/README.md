@@ -1,13 +1,14 @@
-# mBSW model fitting for the Rheology textbook [Created: Jan 31, 2025]
+# **mBSW Model Fitting for the Rheology Textbook** 
+*Created: Jan 31, 2025*
 
 This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data processing, interpolation, and curve fitting. The notebook reads CSV files, processes numerical data, and performs continuous spectrum fitting using `lmfit`.
 
 ## Summary
 
-- An mBSW model is fitted to PB-Linear SAOS data (Fig. 1) from Hatzikiriakos et al. (2000)
-- Particular constraint to match the glassy modulus, for pedagogical reasons. Achieved by varying the minimum relaxation time cutoff ($\tau_{\text{min}} = 1.8\times 10^{-5}$ s) 
-- Generated the following figure and corresponding .csv files in the output_data/ folder
-- Additional analysis performed for improved model fitting and uncertainty quantification
+** An mBSW model is fitted to PB-Linear SAOS data (Fig. 1) from Hatzikiriakos et al. (2000)
+** Specifically matched the glassy modulus, for pedagogical reasons. Achieved by varying the minimum relaxation time cutoff ($\tau_{\text{min}} = 1.8\times 10^{-5}$ s) 
+** Generated the following figure and corresponding .csv files in the output_data/ folder
+** Additional analysis performed for improved model fitting and uncertainty quantification
 
 ## Files
 
