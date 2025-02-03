@@ -6,19 +6,20 @@ This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data pro
 ## Summary
 
 - An mBSW model is fitted to PB-Linear SAOS data (Fig. 1) from Hatzikiriakos et al. (2000). Their parameters corresponding to our standard mBSW form are,
-<div align="center">
+    <div align="center">
 
-| **Variable**    | **Value**          |
-|---------------|------------------|
-| $H_g$ (Pa)   | $4.9 \times 10^5$ |
-| $n_g$         | $0.67$            |
-| $\tau_e$ (s)  | $0.86$            |
-| $H_e$ (Pa)   | $1.86 \times 10^5$ |
-| $n_e$         | $0.30$            |
-| $\tau_{\max}$ (s) | $9.0 \times 10^5$ |
-| $\beta$       | $2.0$ 
+    | **Variable**    | **Value**          |
+    |---------------|------------------|
+    | $H_g$ (Pa)   | $4.9 \times 10^5$ |
+    | $n_g$         | $0.67$            |
+    | $\tau_e$ (s)  | $0.86$            |
+    | $H_e$ (Pa)   | $1.86 \times 10^5$ |
+    | $n_e$         | $0.30$            |
+    | $\tau_{\max}$ (s) | $9.0 \times 10^5$ |
+    | $\beta$       | $2.0$ 
 
-</div>
+    </div>
+
 - Specifically matched the glassy modulus for pedagogical purposes 
   - Achieved by varying the minimum relaxation time cutoff ($\tau_{\text{min}} = 1.8\times 10^{-5}~\text{s}$) 
   - Calculated rubbery modulus, $G_{\text{rubbery}} = 1.42~\text{MPa}$
