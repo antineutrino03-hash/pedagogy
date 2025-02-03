@@ -9,6 +9,10 @@ This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data pro
 - Generated the following figure and corresponding .csv files in the output_data/ folder
 - Additional analysis performed for improved model fitting and uncertainty quantification
 
+<p align="center">
+  <img src="[https://github.com/user-attachments/assets/b463e8d4-68ba-4b8e-9aeb-dababa366755]" width="1000">
+</p>
+
 ## Files
 
 - .csv files are the scraped data from 
