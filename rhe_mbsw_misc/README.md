@@ -1,6 +1,13 @@
-# Miscellaneous Data Scraping and Analysis (Created: Jan 31, 2025)
+# mBSW model fitting for the Rheology textbook [Created: Jan 31, 2025]
 
-This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data processing, interpolation, and curve fitting. The notebook reads CSV files, processes numerical data, applies interpolation techniques, and performs curve fitting using `lmfit`.
+This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data processing, interpolation, and curve fitting. The notebook reads CSV files, processes numerical data, and performs continuous spectrum fitting using `lmfit`.
+
+## Summary
+
+- An mBSW model is fitted to PB-Linear SAOS data (Fig. 1) from Hatzikiriakos et al. (2000)
+- Particular constraint to match the glassy modulus, for pedagogical reasons. Achieved by varying the minimum relaxation time cutoff ($\tau_{\text{min}} = 1.8\times 10^{-5}$ s) 
+- Generated the following figure and corresponding .csv files in the output_data/ folder
+- Additional analysis performed for improved model fitting and uncertainty quantification
 
 ## Files
 
@@ -17,8 +24,10 @@ The exercise stems from the fact that the mBSW fit plot generated in the textboo
 
 For practical purposes, the $\tau_{min}$ is chosen to be $5 \times 10^{-5}$ based on the visual judgment of the glassy modulus. The equation of the mBSW model chosen is:
 
-$$H(\tau) = e^{-\left(\frac{\tau}{\tau_{\max}}\right)^\beta} \left[ H_e \left( \frac{\tau}{\tau_{\max}} \right)^{n_e} + H_g \left( \frac{\tau}{\tau_e} \right)^{-n_g} \right]
-\]$$
+$$H(\tau) = e^{-\left(\frac{\tau}{\tau_{\max}}\right)^\beta} 
+\left[ H_e \left( \frac{\tau}{\tau_{\max}} \right)^{n_e} + 
+H_g \left( \frac{\tau}{\tau_e} \right)^{-n_g} \right]$$
+
 
 The experimental data extracted from the paper is the dynamic moduli of the “PB-linear”, a well-entangled linear 1,4 polybutadiene, 
 <div align="center">
@@ -95,3 +104,6 @@ Feel free to modify the notebook for different datasets or additional processing
 ## License
 
 This project is open-source and licensed under the MIT License.
+
+
+[def]: image.png
