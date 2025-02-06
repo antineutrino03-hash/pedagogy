@@ -11,8 +11,8 @@ This Jupyter Notebook (`mBSW_data_generation.ipynb`) computes the relaxation mod
   <div align="center">
     <table>
       <tr>
-        <td><img src="https://github.com/user-attachments/assets/1b0bb323-2c9e-4a0b-a92c-d03d693e7137" width="375"></td>
-        <td><img src="https://github.com/user-attachments/assets/423a3ed2-a54b-44da-b95e-e236f7915a02" width="400"></td>
+        <td><img src="https://github.com/user-attachments/assets/1b0bb323-2c9e-4a0b-a92c-d03d693e7137" width="275"></td>
+        <td><img src="https://github.com/user-attachments/assets/423a3ed2-a54b-44da-b95e-e236f7915a02" width="300"></td>
       </tr>
     </table>
   </div>
