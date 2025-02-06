@@ -1,11 +1,11 @@
-# **mBSW Model Fitting for the Rheology Textbook** 
+# **mBSW model data for the Rheology Textbook** 
 *Created: Jan 31, 2025*
 
-This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data processing, interpolation, and curve fitting. The notebook reads CSV files, processes numerical data, and performs continuous spectrum fitting using `lmfit`.
+This Jupyter Notebook (`mBSW_data_generation.ipynb`) computes the relaxation modulus and dynamic moduli from a given set of mBSW parameters and saves it to `.csv` files in the `output_data/` folder
 
 ## Summary
 
-- An mBSW model is fitted to PB-Linear SAOS data (Fig. 1) from Hatzikiriakos et al. (2000). Their parameters corresponding to our standard mBSW form are,
+- mBSW model parameters of PB-Linear SAOS data (Fig. 1) from Hatzikiriakos et al. (2000) are used. Their parameters corresponding to our standard mBSW form are,
     <div align="center">
 
     | **Variable**    | **Value**          |
@@ -18,13 +18,16 @@ This repository contains a Jupyter Notebook (`misc_scraping.ipynb`) for data pro
     | $\tau_{\max}$ (s) | $9.0 \times 10^5$ |
     | $\beta$       | $2.0$ 
 
+    $$H(\tau) = e^{-\left(\frac{\tau}{\tau_{\max}}\right)^\beta} 
+    \left[ H_e \left( \frac{\tau}{\tau_{\max}} \right)^{n_e} + 
+    H_g \left( \frac{\tau}{\tau_e} \right)^{-n_g} \right]$$
+
     </div>
 
-- Specifically matched the glassy modulus for pedagogical purposes 
-  - Achieved by varying the minimum relaxation time cutoff ($\tau_{\text{min}} = 1.8\times 10^{-5}~\text{s}$) 
+- A free parameter not mentioned in the paper is the minimum cutoff relaxation time $(\tau_{\text{min}})$. We have used it to match the glassy modulus exactly, giving us,
+  - $\tau_{\text{min}} = 1.8\times 10^{-5}~\text{s}$
   - Calculated rubbery modulus, $G_{\text{rubbery}} = 1.42~\text{MPa}$
-- Generated the following figure and corresponding `.csv` files in the `output_data/` folder
-- Additional analysis performed for improved model fitting and uncertainty quantification
+- Additional analysis performed for improved model fitting and uncertainty quantification. Details in `additional_analysis/`
 
 ![image](https://github.com/user-attachments/assets/5e099b81-99ac-40b6-81eb-7a43a66bb8fb)
 

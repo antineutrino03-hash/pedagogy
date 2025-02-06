@@ -24,32 +24,32 @@ from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 mpl.use("QtAgg")
 
 rheology_labels = {
-    'Time': 'Time, $t$ [s]',
-    'Elongational modulus (dyn/cm2)':'Elongational modulus, $E$ [dyn/cm\^2]',
-    'master Time (hrs)': 'Reduced Time, $t_r$ [hrs]',
-    'master Elongational modulus (dyn/cm2)':'Reduced modulus, $E_r$ [dyn/cm\^2]',
-    'Temperature': 'Temperature, $T$ [\si{\degreeCelsius}]',
-    'Angular frequency': 'Angular frequency, $\\omega$ [rad/s]',
-    'Viscosity': 'Viscosity, $\\eta$ [Pa.s]',
-    'Shear stress': 'Shear stress, $\\tau$ [Pa]',
-    'Shear rate': 'Shear rate, $\\dot{\\gamma}$ [s^-1]',
-    'Relaxation modulus': 'Stress Relaxation modulus, $G(t)$ [Pa]',
-    'Storage modulus': 'Viscoelastic Moduli, $G\', G\'\'$ [Pa]',
-    'Loss modulus': 'Viscoelastic Moduli, $G\', G\'\'$ [Pa]',
-    'Complex modulus': 'Complex Modulus, $G^*$ [Pa]',
-    'Complex viscosity': 'Complex viscosity, $\\eta^*$ [Pa.s]',
-    'Tan(delta)': 'Phase angle, tan $\\delta$ [ ]',
-    'master Storage modulus': 'Reduced Moduli, $G\'_r, G\'\'_r$ [Pa]',
-    'master Loss modulus': 'Reduced Moduli, $G\'_r, G\'\'_r$ [Pa]',
-    'master Angular frequency': 'Reduced Angular frequency, $\\omega_r$ [rad/s]',
-    'master Tan(delta)': 'Phase angle, tan $\\delta$ [ ]',
-    'log Angular frequency': 'Angular frequency, $\\log{\\omega}$ [rad/s]',
-    'log Complex modulus': 'Complex Modulus, $\\log{G^*}$ [Pa]',
-    'log Storage modulus': 'Viscoelastic Moduli, $\\log{G\'}, \\log{G\'\'}$ [Pa]',
-    'log Loss modulus': 'Viscoelastic Moduli, $\\log{G\'}, \\log{G\'\'}$ [Pa]',
-    'None': '',
-    'master None': '',
-    'Strain':'Strain, $\\gamma_0$ [\%]',
+    'Time': r'Time, $t$ [s]',
+    'Elongational modulus (dyn/cm2)': r'Elongational modulus, $E$ [dyn/cm\^2]',
+    'master Time (hrs)': r'Reduced Time, $t_r$ [hrs]',
+    'master Elongational modulus (dyn/cm2)': r'Reduced modulus, $E_r$ [dyn/cm\^2]',
+    'Temperature': r'Temperature, $T$ [\si{\degreeCelsius}]',
+    'Angular frequency': r'Angular frequency, $\omega$ [rad/s]',
+    'Viscosity': r'Viscosity, $\eta$ [Pa.s]',
+    'Shear stress': r'Shear stress, $\tau$ [Pa]',
+    'Shear rate': r'Shear rate, $\dot{\gamma}$ [s^-1]',
+    'Relaxation modulus': r'Relaxation modulus, $G(t)$ [Pa]',
+    'Storage modulus': r"Viscoelastic Moduli, $G', G''$ [Pa]",
+    'Loss modulus': r"Viscoelastic Moduli, $G', G''$ [Pa]",
+    'Complex modulus': r'Complex Modulus, $G^*$ [Pa]',
+    'Complex viscosity': r'Complex viscosity, $\eta^*$ [Pa.s]',
+    'Tan(delta)': r'Phase angle, tan $\delta$ [ ]',
+    'master Storage modulus': r"Reduced Moduli, $G'_r, G''_r$ [Pa]",
+    'master Loss modulus': r"Reduced Moduli, $G'_r, G''_r$ [Pa]",
+    'master Angular frequency': r'Reduced Angular frequency, $\omega_r$ [rad/s]',
+    'master Tan(delta)': r'Phase angle, tan $\delta$ [ ]',
+    'log Angular frequency': r'Angular frequency, $\log{\omega}$ [rad/s]',
+    'log Complex modulus': r'Complex Modulus, $\log{G^*}$ [Pa]',
+    'log Storage modulus': r"Viscoelastic Moduli, $\log{G'}, \log{G''}$ [Pa]",
+    'log Loss modulus': r"Viscoelastic Moduli, $\log{G'}, \log{G''}$ [Pa]",
+    'None': r' ',
+    'master None': r' ',
+    'Strain': r'Strain, $\gamma_0$ [\%]',
 }
 
 criteria_labels = {
@@ -264,112 +264,95 @@ def set_plot_params(temp_arr=np.ones((50,)), model_fit=0, param_plot=0, combined
 
     return fig, ax, symbol_array, color_array, norm
 
-def set_plot_params_temp(temp_arr=np.ones((50,)), model_fit=0, param_plot=0, combined_plot=0, model_fit2=0, single_plot=0, model_fit3=0):
+def non_latex_set_plot_params(temp_arr=np.ones((50,)), model_fit=0, param_plot=0, combined_plot=0, lean_plot=0, model_fit2=0, single_plot=0, model_fit3=0, spectrum_fit=0, num_plots=10):
+    plt.style.use('default')
+    
+    # Set main font to Arial
+    plt.rcParams['font.family'] = 'Arial'
+    plt.rcParams['mathtext.default'] = 'regular'  # Regular font for math text
+    plt.rcParams['mathtext.fontset'] = 'cm'
+    
+    line_thickness = 1.5
 
-    # plt.style.use('default')
-    plt.rcParams['text.usetex'] = True
-    plt.rcParams['text.latex.preamble'] = r'\usepackage{amsmath, siunitx, bm} \renewcommand{\rmdefault}{ptm}'  # Removed sansmath
-    plt.rcParams['axes.linewidth'] = 1.0
-    plt.rcParams['font.family'] = 'serif'
+    # Set linewidths and font sizes for better visibility
+    plt.rcParams['axes.linewidth'] = line_thickness
+    plt.rcParams['axes.titlesize'] = 14
+    plt.rcParams['lines.markersize'] = 6
+    plt.rcParams['errorbar.capsize'] = 4
+    plt.rcParams['lines.linewidth'] = 1.5 * line_thickness
+    plt.rcParams['axes.prop_cycle'] = plt.cycler('color', ['blue'])
 
-    plt.rcParams['lines.markersize'] = 5
-    plt.rcParams['errorbar.capsize'] = 3  # Sets the cap size for error bars
-    plt.rcParams['lines.linewidth'] = 1 
+    # Font sizes for labels, ticks, and legends
     plt.rcParams['axes.labelsize'] = 14
+    plt.rcParams['xtick.labelsize'] = 12
+    plt.rcParams['ytick.labelsize'] = 12
+    plt.rcParams['legend.fontsize'] = 10
+    plt.rcParams['legend.title_fontsize'] = 10
+    plt.rcParams['axes.labelweight'] = 'normal'
 
-    # Set global tick parameters for major ticks
-    plt.rcParams['xtick.major.size'] = 5  
-    plt.rcParams['xtick.major.width'] = 1 
-    plt.rcParams['ytick.major.size'] = 5
-    plt.rcParams['ytick.major.width'] = 1
-    plt.rcParams['xtick.direction'] = 'in'  
-    plt.rcParams['ytick.direction'] = 'in'
-    plt.rcParams['xtick.labelsize'] = 18
-    plt.rcParams['ytick.labelsize'] = 18
-    plt.rcParams['legend.fontsize'] = 12
-    plt.rcParams['legend.title_fontsize'] = 11
-    plt.rcParams['grid.color'] = 'k'  # Grid color
-    plt.rcParams['grid.alpha'] = 0.5  # Transparency of grid lines
-
-    # Set global tick parameters for minor ticks
-    plt.rcParams['xtick.minor.size'] = 3  # Length of minor ticks
-    plt.rcParams['xtick.minor.width'] = 1  # Width of minor ticks
+    # Tick and padding adjustments
+    plt.rcParams['xtick.major.size'] = 6
+    plt.rcParams['xtick.major.width'] = line_thickness
+    plt.rcParams['ytick.major.size'] = 6
+    plt.rcParams['ytick.major.width'] = line_thickness
+    plt.rcParams['xtick.minor.size'] = 3
     plt.rcParams['ytick.minor.size'] = 3
-    plt.rcParams['ytick.minor.width'] = 1
+    plt.rcParams['xtick.direction'] = 'in'
+    plt.rcParams['ytick.direction'] = 'in'
+    plt.rcParams['xtick.top'] = True
+    plt.rcParams['ytick.right'] = True
+    plt.rcParams['xtick.minor.visible'] = True
+    plt.rcParams['ytick.minor.visible'] = True
+    plt.rcParams['xtick.major.pad'] = 4
+    plt.rcParams['ytick.major.pad'] = 4
 
-    # Set whether ticks are drawn on all sides of the plot
-    plt.rcParams['xtick.top'] = True  # Draw ticks on the top axis
-    plt.rcParams['xtick.bottom'] = True  # Draw ticks on the bottom axis
-    plt.rcParams['ytick.right'] = True  # Draw ticks on the right axis
-    plt.rcParams['ytick.left'] = True  # Draw ticks on the left axis
-
-    all_markers = list(MarkerStyle.markers.keys())
-    symbol_array = [
-        'o',  # Circle (filled)
-        's',  # Square (filled)
-        '^',  # Triangle up (filled)
-        '>',  # Triangle right (filled)
-        '<',  # Triangle left (filled)
-        'v',  # Triangle down (filled)
-        'D',
-        'p',  # Pentagon (filled)
-        'h',  # Hexagon (filled)
-        '8',  # Octagon (filled)
-    ]
-
-    colors = [(0, 0, 1), (0, 0.75, 0), (1, 0, 0)]  # R -> G -> B
-    n_bins = 100  # Number of bins
+    # Prepare marker and color arrays
+    symbol_array = ['o', 's', '^', '>', '<', 'v', 'D', 'p', 'h', '8']
+    colors = [(0, 0, 1), (0, 0.75, 0), (1, 0, 0)]
     cmap_name = 'myRGB'
-    cm = LinearSegmentedColormap.from_list(cmap_name, colors, N=n_bins)
-
+    cm = LinearSegmentedColormap.from_list(cmap_name, colors, N=100)
     colormap = cms.coolwarm
     norm = plt.Normalize(np.min(temp_arr), np.max(temp_arr))
     color_array = colormap(norm(temp_arr))
 
+    # Return based on plot types
     if single_plot:
         fig, axes = plt.subplots(1, 1, figsize=(6, 4))
-        return fig, axes, symbol_array, color_array, norm 
-    if combined_plot:
-        fig, axes = plt.subplots(2, 2, figsize=(11, 8), layout='constrained')
-        return fig, axes, symbol_array, color_array, norm 
-    if model_fit3:
+        return fig, [axes], symbol_array, color_array, norm
+    elif combined_plot:
+        fig, axes = plt.subplots(3, 3, figsize=(17, 12))
+    elif lean_plot:
+        fig, axes = plt.subplots(2, 3, figsize=(17, 8))
+    elif model_fit3:
         fig, axes = plt.subplots(1, 2, figsize=(11, 4))
-        return fig, axes, symbol_array, color_array, norm 
-    if model_fit:
-        fig = plt.figure(figsize=(10, 12))
-        spec = mpl.gridspec.GridSpec(ncols=4, nrows=3) # 6 columns evenly divides both 2 & 3
-        axes = []
-        axes.append(fig.add_subplot(spec[0,1:3])) # row 0 with axes spanning 2 cols on evens
-        axes.append(fig.add_subplot(spec[1,0:2]))
-        axes.append(fig.add_subplot(spec[1,2:]))
-        axes.append(fig.add_subplot(spec[2,0:2])) # row 0 with axes spanning 2 cols on odds
-        axes.append(fig.add_subplot(spec[2,2:]))
-        
-        return fig, axes, symbol_array, color_array, norm
-    if param_plot: 
-        fig = plt.figure(figsize=(10, 4))
-        spec = mpl.gridspec.GridSpec(ncols=2, nrows=1)  # Specify 2 columns and 1 row
-        axes = []
-        axes.append(fig.add_subplot(spec[0, 0]))  # First subplot in the first column
-        axes.append(fig.add_subplot(spec[0, 1]))  # Second subplot in the second column
-    
-        return fig, axes, symbol_array, color_array, norm
+    elif model_fit:
+        fig, axes = plt.subplots(3, 2, figsize=(10, 12))
+    elif spectrum_fit:
+        fig, axes = plt.subplots(2, 3, figsize=(15, 8))
+    elif param_plot:
+        fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+    elif model_fit2:
+        fig, axes = plt.subplots(2, 2, figsize=(10, 8))
+    elif 1 <= num_plots <= 3:
+        fig, axes = plt.subplots(1, num_plots, figsize=(5.5*num_plots-1, 4))
+    elif num_plots == 4:
+        fig, axes = plt.subplots(2, 2, figsize=(11, 8))
+    elif num_plots == 5:
+        fig, axes = plt.subplots(2, 3, figsize=(15, 8))
+    elif num_plots == 6:
+        fig, axes = plt.subplots(2, 3, figsize=(15, 8))
+    elif num_plots == 7:
+        fig, axes = plt.subplots(2, 4, figsize=(20, 8))
     else:
-        if model_fit2:
-            fig = plt.figure(figsize=(10, 8))
-            spec = mpl.gridspec.GridSpec(ncols=4, nrows=2) # 6 columns evenly divides both 2 & 3
-            axes = []
-            axes.append(fig.add_subplot(spec[0,0:2])) # row 0 with axes spanning 2 cols on evens
-            axes.append(fig.add_subplot(spec[0,2:]))
-            axes.append(fig.add_subplot(spec[1,1:3]))
-            return fig, axes, symbol_array, color_array, norm
-        else:
-            if temp_arr[0] == np.ones((50,))[0]:
-                fig, ax = plt.subplots(figsize=[6, 4])
-            else:
-                fig, ax = plt.subplots(figsize=[6, 4])
-
-    return fig, ax, symbol_array, color_array, norm
+        fig, axes = plt.subplots(1, 1, figsize=(6, 4))
+    
+    if isinstance(axes, np.ndarray):
+        for ax in axes.flat:
+            ax.tick_params(labelsize=12)
+    else:
+        axes.tick_params(labelsize=12)
+    
+    return fig, axes, symbol_array, color_array, norm
 
 def plot_normalized_data(prefix, normalized_data_dict, xcol, plot_column_indices=None, filename='NO_NAME'):
     lgd = []
