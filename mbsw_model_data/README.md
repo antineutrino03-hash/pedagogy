@@ -17,13 +17,12 @@ This Jupyter Notebook (`mBSW_data_generation.ipynb`) computes the relaxation mod
     </table>
   </div>
 - The inferred parameters from the paper corresponding to our standard mBSW form are,
-
-  $$H(\tau) = e^{-\left(\frac{\tau}{\tau_{\max}}\right)^\beta} 
-  \left[ H_e \left( \frac{\tau}{\tau_{\max}} \right)^{n_e} + 
-  H_g \left( \frac{\tau}{\tau_e} \right)^{-n_g} \right]$$
-
+  
+$$H(\tau) = e^{-\left(\frac{\tau}{\tau_{\max}}\right)^\beta} 
+\left[ H_e \left( \frac{\tau}{\tau_{\max}} \right)^{n_e} + H_g \left( \frac{\tau}{\tau_e} \right)^{-n_g} \right]$$
+  
   <div align="center">
-
+    
   | **Variable**    | **Value**          |
   |---------------|------------------|
   | $H_g$ (Pa)   | $4.9 \times 10^5$ |
