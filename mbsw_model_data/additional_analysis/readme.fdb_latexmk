@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1738876890.9557 "/Users/asm18/Documents/python_repo/pedagogy/mbsw_model_data/readme.tex" "readme.pdf" "readme" 1738876891.62981 0
-  "/Users/asm18/Documents/python_repo/pedagogy/mbsw_model_data/readme.tex" 1738876890.03756 3194 c58b8ab98d3d05fec3eafc2bd556d53f ""
+["pdflatex"] 1738876947.53715 "/Users/asm18/Documents/python_repo/pedagogy/mbsw_model_data/additional_analysis/readme.tex" "readme.pdf" "readme" 1738876948.14666 2
+  "/Users/asm18/Documents/python_repo/pedagogy/mbsw_model_data/additional_analysis/readme.tex" 1738876890.03756 3194 c58b8ab98d3d05fec3eafc2bd556d53f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -128,8 +128,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1726475602.3088 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1726475558 8221433 38e253eec09faf87a1c5c9f5fa501b0f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "model_data_figure.png" 1738872656.83045 82594 3e21fb2645ea617335a8b7e06f618976 ""
-  "readme.aux" 1738876891.5525 464 57b8a5978a5929a60f38b49dae517f37 "pdflatex"
+  "model_data_figure.png" 0 -1 0 ""
+  "readme.aux" 1738876948.07385 464 8e4316e32ca334c3044408c6a1960736 "pdflatex"
   "readme.tex" 1738876890.03756 3194 c58b8ab98d3d05fec3eafc2bd556d53f ""
   (generated)
   "readme.aux"
