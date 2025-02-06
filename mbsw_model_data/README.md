@@ -5,7 +5,7 @@ This Jupyter Notebook (`mBSW_data_generation.ipynb`) computes the relaxation mod
 
 ## Summary
 
-- The dataset used here from the Hatzikiriakos et al. (2000) is for “PB-linear”, a well-entangled linear 1,4 polybutadiene, 
+- Data used here from the Hatzikiriakos et al. (2000) is for “PB-linear”, a well-entangled linear 1,4 polybutadiene, 
   > Hatzikiriakos, Savvas & Kapnistos, Michael & Chevillard, Cyril & Winter, H. & Roovers, Jacques. (2000). Relaxation time spectra of star polymers. Rheologica Acta. 39. 38-43. 10.1007/s003970050005.
 
   <div align="center">
@@ -18,11 +18,11 @@ This Jupyter Notebook (`mBSW_data_generation.ipynb`) computes the relaxation mod
   </div>
 - The inferred parameters from the paper corresponding to our standard mBSW form are,
 
-  <div align="center">
-
   $$H(\tau) = e^{-\left(\frac{\tau}{\tau_{\max}}\right)^\beta} 
   \left[ H_e \left( \frac{\tau}{\tau_{\max}} \right)^{n_e} + 
   H_g \left( \frac{\tau}{\tau_e} \right)^{-n_g} \right]$$
+
+  <div align="center">
 
   | **Variable**    | **Value**          |
   |---------------|------------------|
